@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    text-transform: capitalize;
+    background-color: #B6B6B6;
+}
+.box{
+    width: 500px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.box input , textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+form{
+    position: relative;
+}
+
+form button{
+    position: absolute;
+    bottom: -20px;
+    right: 530px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    background-color: #FDBD01;
+    color: white;
+    cursor: pointer;
+}
+
+.noteKeeper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    padding: 16px;
+  }
+  
+  .noteCard {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+    max-width: 300px;
+  }
+  
+  .noteTitle {
+    font-size: 1.25em;
+    margin-bottom: 8px;
+  }
+  
+  .noteContent {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  span{
+    color: #FDBD01;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #acaaaa3a;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .icon{
+    display: flex;
+    justify-content: end;
+  }
+
+  h1{
+    background-color: #FDBD01;
+    color: white;
+    padding: 16px;
+    display: flex;
+  }

@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Note from './Note'
+import { useState } from 'react'
+import Notekeeper from './Notekeeper'
+import Header from './Header'
 
 function App() {
+
+  const [allNote, setallNote] = useState([])
+
+  const addNote = (data) => {
+    let newNote = [...allNote, data]
+    alert("Note added...")
+    setallNote(newNote)
+    console.log(data);
+  }
+
+  const removeNote = (id) => {
+      setallNote(allNote.filter(val => val.id != id))
+      alert("Note deleted succesfully...")
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Note addNote={addNote} />
+      <Notekeeper allNote={allNote} removeNote={removeNote}/>
     </div>
   );
 }
